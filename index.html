@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kameng Hostel — IIT Guwahati</title>
+<style>
+  :root{
+    --ink:#0e2a3b;
+    --river:#1c5d73;
+    --river-light:#3d8fa8;
+    --mist:#eef5f6;
+    --paper:#fbfaf7;
+    --line:#d7e2e2;
+    --accent:#c96a3a;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Georgia','Iowan Old Style', ui-serif, serif;
+    line-height:1.5;
+  }
+  .topbar{
+    background:linear-gradient(120deg,var(--ink),var(--river) 70%);
+    color:var(--mist);
+    padding:52px 24px 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .topbar::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height:36px;
+    background:
+      radial-gradient(circle at 10% 100%, transparent 14px, var(--paper) 15px) 0 0/60px 100%,
+      var(--paper);
+    background-repeat:repeat-x;
+    opacity:0.98;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:12px;
+    color:var(--river-light);
+    font-family:ui-monospace,'SFMono-Regular',Consolas,monospace;
+    margin:0 0 10px;
+  }
+  h1{
+    margin:0;
+    font-size:clamp(34px,6vw,54px);
+    font-weight:400;
+    letter-spacing:-0.01em;
+  }
+  .sub{
+    max-width:520px;
+    color:#cfe3e8;
+    font-size:16px;
+    margin-top:14px;
+  }
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 24px 80px;
+  }
+  .section-label{
+    font-family:ui-monospace,'SFMono-Regular',Consolas,monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--river);
+    margin:44px 0 14px;
+  }
+  .card-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  a.card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    text-decoration:none;
+    color:var(--ink);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px 20px;
+    transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  a.card:hover, a.card:focus-visible{
+    border-color:var(--river-light);
+    transform:translateY(-1px);
+    box-shadow:0 6px 18px rgba(28,93,115,0.12);
+    outline:none;
+  }
+  a.card:focus-visible{
+    outline:2px solid var(--river-light);
+    outline-offset:2px;
+  }
+  .card-text .name{
+    font-size:17px;
+    font-weight:600;
+  }
+  .card-text .desc{
+    font-family:ui-sans-serif,system-ui,sans-serif;
+    font-size:13px;
+    color:#5b7480;
+    margin-top:3px;
+  }
+  .arrow{
+    font-family:ui-monospace,monospace;
+    color:var(--river-light);
+    font-size:18px;
+    flex-shrink:0;
+  }
+  .contact-block{
+    background:var(--mist);
+    border-radius:10px;
+    padding:20px 22px;
+    font-family:ui-sans-serif,system-ui,sans-serif;
+    font-size:14.5px;
+  }
+  .contact-block div{ margin:6px 0; }
+  .contact-block b{ color:var(--river); }
+  .contact-block a{ color:var(--ink); }
+  footer{
+    text-align:center;
+    font-family:ui-sans-serif,system-ui,sans-serif;
+    font-size:12.5px;
+    color:#8a9aa1;
+    padding:30px 24px 50px;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <p class="eyebrow">IIT Guwahati · Hostel Portal</p>
+  <h1>Kameng Hostel</h1>
+  <p class="sub">Everything you need for network setup and complaints, in one place.</p>
+</div>
+
+<main>
+
+  <p class="section-label">Network setup</p>
+  <div class="card-list">
+    <a class="card" href="https://www.iitg.ac.in/cc/lan_setting.php" target="_blank" rel="noopener">
+      <span class="card-text">
+        <span class="name">Campus LAN connection</span>
+        <span class="desc">Wired connection setup instructions</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="card" href="https://www.iitg.ac.in/cc/wifi.php" target="_blank" rel="noopener">
+      <span class="card-text">
+        <span class="name">Campus WiFi connection</span>
+        <span class="desc">WiFi setup instructions</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <p class="section-label">Complaints</p>
+  <div class="card-list">
+    <a class="card" href="https://forms.gle/8FmjbyYU8mUdQSkUA" target="_blank" rel="noopener">
+      <span class="card-text">
+        <span class="name">Maintenance complaint form</span>
+        <span class="desc">Report room / hostel maintenance issues</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="card" href="https://www.iitg.ac.in/cb/" target="_blank" rel="noopener">
+      <span class="card-text">
+        <span class="name">Internet / network complaint</span>
+        <span class="desc">Computer Centre grievance portal</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <p class="section-label">Direct contact</p>
+  <div class="contact-block">
+    <div><b>Network issues:</b> <a href="mailto:netadmin@iitg.ac.in">netadmin@iitg.ac.in</a></div>
+    <div><b>Maintenance secretary:</b> <a href="mailto:ms.kameng@iitg.ac.in">ms.kameng@iitg.ac.in</a></div>
+  </div>
+
+</main>
+
+<footer>Kameng Hostel · IIT Guwahati</footer>
+
+</body>
+</html>
